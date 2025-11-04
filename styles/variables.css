@@ -1,0 +1,37 @@
+:root {
+    --color-yellow: #F5C542;
+    --color-yellowTitle: #E9B949;
+    --color-black: #000;
+    --color-white: #FFF;
+    --color-gray: #707D89;
+    --color-bg: #181818;
+
+    --padding: 20px;
+
+    --header-height: 117px;
+}   
+
+@media (max-width: 1199px) {
+    :root {
+        --header-height: 92px;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --header-height: 100px;
+    }
+}
+
+@media (max-width: 769px) {
+    :root {
+        --header-height: 78px;
+    }
+}
+
+@media (max-width: 575px) {
+    :root {
+        --header-height: 61px;
+        --padding: 15px;
+    }
+}

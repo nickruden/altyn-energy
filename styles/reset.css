@@ -205,7 +205,7 @@ h3 {
   color: var(--color-yellowTitle);
 }
 
-h2 {
+h2, .h2 {
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2292;

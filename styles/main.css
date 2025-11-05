@@ -1,3 +1,523 @@
+/* БЛОК - О НАС */
+.about {}
+
+@media (max-width: 769px) {
+    .about .my-container {
+        padding: 0px;
+    }
+}
+
+.about__inner {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background: url('../assets/images/sections/about/bg-img.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 769px) {
+    .about__inner {
+        background-position: bottom;
+        background-size: 100%;
+        padding-bottom: 164px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about__inner {
+        padding-bottom: 123px;
+        background-size: 100% 156px;
+    }
+}
+
+.about__content {
+    padding: 35px 73px 35px 47px;
+    background-color: #FFFAEE;
+    color: var(--color-black);
+    border-radius: 0px 10px 10px 0px;
+    max-width: 816px;
+    position: relative;
+}
+
+@media (max-width: 1460px) {
+    .about__content {
+        padding: 35px 57px 35px 47px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .about__content {
+        padding: 30px 40px;
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about__content {
+        padding: 24px 30px;
+        max-width: 530px;
+    }
+}
+
+@media (max-width: 769px) {
+    .about__content {
+        padding: 24px 20px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .about__content {
+        padding: 24px 15px;
+    }
+}
+
+.about__content::after {
+    content: "";
+    display: block;
+    height: 39px;
+    width: 40px;
+    background: url('../assets/images/sections/about/top-icon.svg') no-repeat;
+    position: absolute;
+    top: 32px;
+    right: 28px;
+}
+
+@media (max-width: 1199px) {
+    .about__content::after {
+        height: 34px;
+        width: 35px;
+        top: 21px;
+        right: 15px;
+    }
+}
+
+.about h2 {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 1199px) {
+    .about h2 {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about h2 {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about h2 {
+        margin-bottom: 12px;
+    }
+}
+
+.about__pre-title {
+    color: var(--color-black);
+    margin-bottom: 16px;
+}
+
+@media (max-width: 1199px) {
+    .about__pre-title {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about__pre-title {
+        margin-bottom: 12px;
+    }
+}
+
+.about__texts {
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+@media (max-width: 1199px) {
+    .about__texts {
+        font-size: 14px;
+        line-height: 1.215;
+    }
+}
+
+@media (max-width: 992px) {
+    .about__texts {
+        gap: 12px;
+    }
+}
+
+.about__texts .color-yellow {
+    font-weight: 800;
+}
+
+
+/* БЛОК - НАШИ ПРЕИМУЩЕСТВА */
+.our-advantages {
+    overflow: hidden;
+}
+
+.our-advantages .my-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .our-advantages .my-container {
+        gap: 26px;
+    }
+}
+
+@media (max-width: 575px) {
+    .our-advantages .my-container {
+        gap: 18px;
+    }
+}
+
+.our-advantages header {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+@media (max-width: 992px) {
+    .our-advantages header {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .our-advantages header {
+        gap: 14px;
+    }
+}
+
+.our-advantages h2 {
+    white-space: nowrap;
+}
+
+.our-advantages__pre-title {}
+
+@media (max-width: 575px) {
+    .our-advantages__pre-title {
+        font-size: 14px;
+        line-height: 1.215;
+    }
+}
+
+.our-advantages__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #D2DAE1;
+}
+
+@media (max-width: 1199px) {
+    .our-advantages__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 769px) {
+    .our-advantages__cards {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+}
+
+.our-advantages__card {
+    padding: 21px 21px 17px 32px;
+    background-color: #2B2B2B;
+}
+
+@media (max-width: 1199px) {
+    .our-advantages__card:not(:nth-last-child(-n + 2)) {
+        border-bottom: 1px solid #D2DAE1;
+    }
+
+    .our-advantages__card {
+        padding: 18px 21px 17px 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .our-advantages__card-inner {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 769px) {
+    .our-advantages__card:not(:last-child) {
+        border-bottom: 2px solid #D2DAE1;
+    }
+}
+
+@media (max-width: 575px) {
+    .our-advantages__card {
+        padding: 13px 14px 13px 16px;
+    }
+}
+
+.our-advantages__card:not(:last-child) {
+    border-right: 1px solid #D2DAE1;
+}
+
+.our-advantages__card-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .our-advantages__card-inner {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .our-advantages__card-inner {
+        gap: 8px;
+    }
+}
+
+.our-advantages__card-inner h3 {
+    font-size: 20px;
+    line-height: 120%;
+}
+
+@media (max-width: 1199px) {
+    .our-advantages__card-inner h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .our-advantages__card-inner h3 {
+        font-size: 16px;
+    }
+}
+
+.our-advantages__card-inner p {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+@media (max-width: 430px) {
+    .our-advantages__card-inner p {
+        font-size: 12px;
+        line-height: 1.4169;
+    }
+}
+
+
+/* БЛОК - ЭТАПЫ СОТРУДНИЧЕСТВА */
+.coop-stages {}
+
+.coop-stages .my-container {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+@media (max-width: 1199px) {
+    .coop-stages .my-container {
+        gap: 27px;
+    }
+}
+
+.coop-stages__pre-title {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .coop-stages__pre-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 1.2224;
+    }
+}
+
+.coop-stages__header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #C8C8C8;
+}
+
+@media (max-width: 769px) {
+    .coop-stages__header-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .coop-stages__header-text {
+        max-width: 210px;
+        line-height: 1.215;
+        gap: 8px;
+    }
+}
+
+.coop-stages__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 14px;
+    counter-reset: stage-number;
+}
+
+@media (max-width: 992px) {
+    .coop-stages__cards {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 34px;
+        padding-top: 20px;
+    }
+}
+
+.coop-stages__card {
+    padding: 66px 20px 22px 20px;
+    background-color: var(--color-yellow);
+    border-radius: 5px;
+    position: relative;
+}
+
+@media (max-width: 1199px) {
+    .coop-stages__card {
+        padding: 56px 14px 16px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .coop-stages__card {
+        padding: 66px 20px 22px 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .coop-stages__card {
+        padding: 56px 14px 16px 16px;
+    }
+}
+
+.coop-stages__card:not(:last-child):after {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 15px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.7071 8.07112C19.0976 7.6806 19.0976 7.04743 18.7071 6.65691L12.3431 0.292946C11.9526 -0.0975785 11.3195 -0.0975785 10.9289 0.292946C10.5384 0.68347 10.5384 1.31664 10.9289 1.70716L16.5858 7.36401L10.9289 13.0209C10.5384 13.4114 10.5384 14.0446 10.9289 14.4351C11.3195 14.8256 11.9526 14.8256 12.3431 14.4351L18.7071 8.07112ZM0 7.36401L0 8.36401L18 8.36401V7.36401V6.36401L0 6.36401L0 7.36401Z' fill='white'/%3E%3C/svg%3E") no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -21px;
+}
+
+@media (max-width: 992px) {
+    .coop-stages__card:not(:last-child):after {
+        width: 16px;
+        height: 14px;
+        top: auto;
+        right: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        bottom: -24px;
+    }
+}
+
+.coop-stages__card-inner {}
+
+.coop-stages__card-number {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #2B2B2B;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-12px);
+}
+
+@media (max-width: 1199px) {
+    .coop-stages__card-number {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .coop-stages__card-number {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 769px) {
+    .coop-stages__card-number {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.coop-stages__card-number::after {
+    content: counter(stage-number);
+    counter-increment: stage-number;
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--color-yellow);
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1199px) {
+    .coop-stages__card-number::after {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 992px) {
+    .coop-stages__card-number::after {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 769px) {
+    .coop-stages__card-number::after {
+        font-size: 54px;
+    }
+}
+
+.coop-stages__body {
+    font-size: 14px;
+    line-height: 1.215;
+    color: #141414;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coop-stages__body h3 {
+    font-size: 14px;
+    color: #141414;
+}
+
+.coop-stages__body p {
+    color: #141414;
+}
+
+
 /* БЛОК - ГЕОГРАФИЯ ПОСТАВОК */
 .where-delivery {
     margin-bottom: 30px;

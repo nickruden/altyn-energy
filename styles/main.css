@@ -266,14 +266,54 @@
 
 .hero-section__option {
     padding: 20px 13px;
-    position: relative;
     min-height: 210px;
     height: 100%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
 }
+
+.hero-section__option::before,
+.hero-section__option::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hero-section__option::after {
+    width: 194px;
+    height: 194px;
+    top: -58px;
+    left: 164px;
+}
+
+.hero-section__option::before {
+    width: 370px;
+    height: 370px;
+    top: -140px;
+    left: 76px;
+}
+
+.hero-section__option.discount::after {
+    background-color: #E9B949;
+}
+
+.hero-section__option.discount::before {
+    background-color: #FFE18F;
+}
+
+.hero-section__option.calculation::after {
+    background-color: #263237;
+}
+
+.hero-section__option.calculation::before {
+    background-color: #404B51;
+}
+
 
 .hero-section__option.discount {
     background-color: #E9B949;
@@ -287,6 +327,8 @@
     font-weight: 500;
     line-height: 115%;
     max-width: 217px;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-section__option.calculation .hero-section__option-texts {
@@ -315,6 +357,7 @@
     position: absolute;
     top: 10px;
     right: 49px;
+    z-index: 5;
 }
 
 @media (max-width: 1460px) {
@@ -1076,12 +1119,14 @@
     top: 0;
     right: var(--padding);
     overflow: hidden;
+    border-radius: 10px;
 }
 
 @media (max-width: 1199px) {
     .personal-offer__img-wrap {
         max-width: 440px;
         right: -70px;
+        border-radius: 0px;
     }
 }
 
@@ -1766,4 +1811,92 @@
         width: 100%;
         height: auto;
     }
+}
+
+.fixed-buttons {
+    position: fixed;
+    right: clamp(.626rem, .268vw + .572rem, .814rem);
+    bottom: clamp(.626rem, .893vw + .447rem, 1.251rem);
+    z-index: 99;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: clamp(.939rem, .446vw + .849rem, 1.251rem);
+    align-items: center
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(2.814rem, .893vw + 2.635rem, 3.439rem);
+    height: clamp(2.814rem, .893vw + 2.635rem, 3.439rem);
+    padding-bottom: .0625rem;
+    padding-left: .0625rem;
+    color: #fff;
+    font-size: clamp(1.626rem, .536vw + 1.519rem, 2.001rem);
+    line-height: 3.3125rem;
+    text-align: center;
+    background-color: #25d366;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-colors)
+}
+
+.whatsapp-button:hover {
+    color: #fff !important;
+}
+
+.whatsapp-button::after,
+.whatsapp-button::before {
+    position: absolute;
+    display: block;
+    border: 50%;
+    border: 1px solid #25d366;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    opacity: 0;
+    animation: whatsapp-button-animate 1.5s linear infinite;
+    content: " ";
+    inset: -20px
+}
+
+.whatsapp-button::after {
+    animation-delay: .5s
+}
+
+@keyframes whatsapp-button-animate {
+    0% {
+        transform: scale(.5);
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0
+    }
+}
+
+.whatsapp-button .icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.whatsapp-button .icon img,
+.whatsapp-button .icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentcolor
 }

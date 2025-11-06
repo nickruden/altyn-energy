@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    position: relative;
 }
 
 @media (max-width: 769px) {
@@ -46,6 +47,64 @@ input {
     color: var(--color-gray);
 }
 
+.input-wrap.type_2 input {
+    padding: 14.2px 12px;
+    padding-left: 52px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    color: #141414;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 992px) {
+    .input-wrap.type_2 input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .input-wrap.type_2 input {
+        padding: 9px 12px;
+        padding-left: 46px;
+        font-size: 14px;
+    }
+}
+
+.input-wrap.type_2 .input-wrap-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+
+@media (max-width: 992px) {
+    .input-wrap.type_2 .input-wrap-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .input-wrap.type_2 .input-wrap-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .input-wrap.type_2 .input-wrap-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+.input-wrap.type_2 input::placeholder {
+    color: rgba(28, 28, 28, 0.2);
+}
+
 input.no-valid,
 textarea.no-valid {
     color: red !important;
@@ -69,7 +128,6 @@ textarea.no-valid::placeholder {
         line-height: 150%;
     }
 }
-
 
 .agree-text a {
     display: inline;

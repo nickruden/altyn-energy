@@ -55,6 +55,7 @@
 
 .btn_black:hover {
     color: #181818;
+    border-color: #181818;
     background-color: transparent;
 }
 

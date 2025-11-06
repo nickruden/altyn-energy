@@ -1,5 +1,6 @@
 /* БЛОК - НАША ПРОДУКЦИЯ */
-.our-products {}
+.our-products {
+}
 
 .our-products h2 {
     margin-bottom: 41px;
@@ -276,7 +277,7 @@
         flex-direction: row;
     }
 
-    .our-products__card-buttons * {
+    .our-products__card-buttons > * {
         width: 100%;
     }
 }

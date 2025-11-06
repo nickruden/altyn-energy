@@ -258,11 +258,6 @@
 
 .footer__cmd {}
 
-.social-medias {
-    display: flex;
-    gap: 16px;
-}
-
 @media (max-width: 1199px) {
     .footer__cmd {
         gap: 12px;
@@ -275,10 +270,6 @@
     }
 }
 
-.social-medias__item {
-    width: 46px;
-    height: 46px;
-}
 
 @media (max-width: 1199px) {
     .footer__cmd .social-medias__item {
@@ -293,15 +284,6 @@
         height: 28px;
     }
 }
-
-.social-medias__item * svg {
-    width: 100%;
-    height: 100%;
-}
-
-.social-medias__wa {}
-
-.social-medias__tg {}
 
 .footer__form-wrap {
     padding: 16px 47px;

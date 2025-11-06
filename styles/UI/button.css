@@ -1,5 +1,5 @@
 .btn {
-    padding: 16.7px 20px;
+    padding: 16.7px 10px;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -30,7 +30,7 @@
 }
 
 .btn_noBg {
-    padding: 14.7px 20px;
+    padding: 14.7px 10px;
     color: var(--color-white);
     background-color: transparent;
 }
@@ -130,4 +130,14 @@
 
 .btn_arrowOn:hover svg path {
     stroke: #FFF;
+}
+
+.social-medias__wa,
+.social-medias__tg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

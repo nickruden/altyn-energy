@@ -1,3 +1,41 @@
+// == СКРИПТ ХЕДЕРА ==
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const burgerButton = header.querySelector(".burger-button");
+
+  burgerButton.addEventListener("click", () => {
+    header.classList.toggle("menu-opened");
+    document.body.style.overflow = header.classList.contains("menu-opened") ? "hidden" : "";
+  });
+
+  document.querySelectorAll('.mobile-menu a[href]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (header.classList.contains("menu-opened")) {
+        header.classList.remove("menu-opened");
+        document.body.style.overflow = "";
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    const stickyOffset = 165;
+    
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > stickyOffset) {
+                header.classList.add('sticky');
+                document.body.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky');
+                document.body.classList.remove('sticky-header');
+            }
+        });
+    }
+});
+
+
 // == СКРИПТ МОДАЛЬНОГО ОКНА ==
 document.addEventListener("DOMContentLoaded", function () {
   const modalOpeners = document.querySelectorAll("[data-modal-open]");
